@@ -13,3 +13,4 @@ Route::get("/alumnos",[AlumnosController::class, "alumnos"]);
 Route::get("/profesores",[ProfesoresController::class, "profesores"]);
 Route::get("/cursos",[CursosController::class, "cursos"]);
 Route::get("/notas",[NotasController::class, "notas"]);
+Route::get("/notas",[NotasController::class, "notass"]);
