@@ -1,4 +1,3 @@
-<!doctype html>
 <html lang="en" data-layout="vertical" data-topbar="light" data-sidebar="dark" data-sidebar-size="lg" data-sidebar-image="none" data-preloader="disable">
 
 <head>
@@ -819,11 +818,11 @@
                                     <li class="nav-item">
                                         <a href="/notas" class="nav-link" > Notas </a>
                                     </li>
-                                    
+
                                 </ul>
                             </div>
                         </li> <!-- end Dashboard Menu -->
-                        
+
 
                     </ul>
                 </div>
@@ -851,41 +850,41 @@
                                     <div class="col-12">
                                         <div class="d-flex align-items-lg-center flex-lg-row flex-column">
                                             <div class="flex-grow-1">
-                                                <h4 class="fs-16 mb-1">Good Morning, Anna!</h4>
-                                                <p class="text-muted mb-0">Here's what's happening with your store today.</p>
+                                                <h4 class="fs-16 mb-1">Alumnos</h4>
                                             </div>
-                                            <div class="mt-3 mt-lg-0">
-                                                <form action="javascript:void(0);">
-                                                    <div class="row g-3 mb-0 align-items-center">
-                                                        <div class="col-sm-auto">
-                                                            <div class="input-group">
-                                                                <input type="text" class="form-control border-0 dash-filter-picker shadow" data-provider="flatpickr" data-range-date="true" data-date-format="d M, Y" data-deafult-date="01 Jan 2022 to 31 Jan 2022">
-                                                                <div class="input-group-text bg-primary border-primary text-white">
-                                                                    <i class="ri-calendar-2-line"></i>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <!--end col-->
-                                                        <div class="col-auto">
-                                                            <button type="button" class="btn btn-soft-success"><i class="ri-add-circle-line align-middle me-1"></i> Add Product</button>
-                                                        </div>
-                                                        <!--end col-->
-                                                        <div class="col-auto">
-                                                            <button type="button" class="btn btn-soft-info btn-icon waves-effect waves-light layout-rightside-btn"><i class="ri-pulse-line"></i></button>
-                                                        </div>
-                                                        <!--end col-->
-                                                    </div>
-                                                    <!--end row-->
-                                                </form>
-                                            </div>
+
                                         </div><!-- end card header -->
+                                        <table class="table text-center">
+                                            <thead>
+                                              <tr>
+                                                <th scope="col">Id</th>
+                                                <th scope="col">Nombre Completo</th>
+                                                <th scope="col">DNI</th>
+                                                <th scope="col">Telefono</th>
+                                                <th scope="col">Email</th>
+                                                <th scope="col">Carrera</th>
+                                              </tr>
+                                            </thead>
+                                            <tbody>
+                                              @foreach ($alumnos as $alumno)
+                                                <tr>
+                                                  <td>{{$alumno->id}}</td>
+                                                  <td>{{$alumno->nombre_completo}}</td>
+                                                  <td>{{$alumno->dni}}</td>
+                                                  <td>{{$alumno->telefono}}</td>
+                                                  <td>{{$alumno->email}}</td>
+                                                  <td>{{$alumno->carrera}}</td>
+                                                </tr>
+                                              @endforeach
+                                            </tbody>
+                                          </table>
                                     </div>
                                     <!--end col-->
                                 </div>
                             </div>
                         </div>
                     </div>
-                
+
                 </div>
                 <!-- container-fluid -->
             </div>
@@ -1110,7 +1109,7 @@
                     <div id="sidebar-visibility">
                         <h6 class="mt-4 mb-0 fw-semibold text-uppercase">Sidebar Visibility</h6>
                         <p class="text-muted">Choose show or Hidden sidebar.</p>
-                
+
                         <div class="row">
                             <div class="col-4">
                                 <div class="form-check card-radio">
@@ -1567,7 +1566,7 @@
                                 <label class="form-check-label p-0 avatar-sm h-auto" for="sidebarimg-01">
                                     <img src="assets/images/sidebar/img-1.jpg" alt="" class="avatar-md w-auto object-fit-cover">
                                 </label>
-                            </div>	
+                            </div>
 
                             <div class="form-check sidebar-setting card-radio">
                                 <input class="form-check-input" type="radio" name="data-sidebar-image" id="sidebarimg-02" value="img-2">
@@ -1593,7 +1592,7 @@
                     <div id="preloader-menu">
                         <h6 class="mt-4 mb-0 fw-semibold text-uppercase">Preloader</h6>
                         <p class="text-muted">Choose a preloader.</p>
-                    
+
                         <div class="row">
                             <div class="col-4">
                                 <div class="form-check sidebar-setting card-radio">
@@ -1651,7 +1650,7 @@
                                 <h5 class="fs-13 text-center mt-2">Disable</h5>
                             </div>
                         </div>
-                    
+
                     </div>
                     <!-- end preloader-menu -->
 

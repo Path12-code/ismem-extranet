@@ -9,8 +9,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get("/alumnos",[AlumnosController::class, "alumnos"]);
-Route::get("/profesores",[ProfesoresController::class, "profesores"]);
-Route::get("/cursos",[CursosController::class, "cursos"]);
-Route::get("/notas",[NotasController::class, "notas"]);
-Route::get("/notas",[NotasController::class, "notass"]);
+Route::resource("/alumnos",AlumnosController::class);
+Route::resource("/profesores",ProfesoresController::class);
+Route::resource("/cursos",CursosController::class);
+Route::resource("/notas",NotasController::class);
